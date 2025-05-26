@@ -3,7 +3,7 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/app.webmanifest",
-  "/icons/icon-192x192.png"
+  "/images/logo.png"
   // Tambahkan file statis lain yang ingin di-cache
 ];
 
