@@ -2,7 +2,7 @@ const CACHE_NAME = "harry-potter-story-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/manifest.webmanifest",
+  "/app.webmanifest",
   "/icons/icon-192x192.png",
   "/icons/icon-512x512.png",
   // Tambahkan file statis lain yang ingin di-cache
