@@ -3,8 +3,7 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/app.webmanifest",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png",
+  "/icons/icon-192x192.png"
   // Tambahkan file statis lain yang ingin di-cache
 ];
 
@@ -36,7 +35,7 @@ self.addEventListener("push", event => {
   const title = data.title || "Notifikasi Baru!";
   const options = {
     body: data.body || "Ada update baru di Harry Potter Story.",
-    icon: "/icons/icon-192x192.png"
+    icon: "/images/logo.png"
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });
