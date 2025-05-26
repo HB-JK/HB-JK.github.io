@@ -1,0 +1,10 @@
+{
+  "id": "/?source=",
+  "name": "Harry Potter Story",
+  "short_name": "HarryPotStory",
+  "description": "Ssitem yang digunakan untuk sharing kesukaan tentang harry potter.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd"
+}
