@@ -15,9 +15,23 @@ self.addEventListener("install", event => {
 });
 
 // Fetch: cache first, fallback ke network
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
+  // Only handle GET requests
+  if (event.request.method !== 'GET') return;
+
+  const req = event.request;
+
   event.respondWith(
-    caches.match(event.request).then(response => response || fetch(event.request))
+    fetch(req).catch(async () => {
+      const cachedResponse = await caches.match(req);
+
+      // If not found, and this is navigation request (HTML), return /
+      if (!cachedResponse && req.mode === 'navigate') {
+        return caches.match('/');
+      }
+
+      return cachedResponse || Response.error();
+    })
   );
 });
 
