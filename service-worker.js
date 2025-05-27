@@ -3,7 +3,7 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/manifest.webmanifest",
-  "/icons/logo.png",
+  "/images/logo.png",
   "/favicon.png"
   // Tambahkan file statis lain yang ingin di-cache
 ];
@@ -50,7 +50,7 @@ self.addEventListener("push", event => {
   const title = data.title || "Notifikasi Baru!";
   const options = {
     body: data.body || "Ada update baru di Daily Life Story.",
-    icon: "/icons/logo.png"
+    icon: "/images/logo.png"
   };
   event.waitUntil(self.registration.showNotification(title, options));
 });
